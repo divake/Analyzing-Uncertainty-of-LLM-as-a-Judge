@@ -1,0 +1,23 @@
+You'll be handed a summary of a news article.
+
+Your challenge is to rate how factually consistent the summary is with the source article.
+
+Make sure to thoroughly read and understand these instructions before diving in. Keep this guide handy as you work through the task, so you can refer back to it if needed.
+
+Evaluation Criteria:
+Consistency (1-5): Does the summary contain only factual statements that can be verified from the source article? A consistent summary does not introduce facts, figures, or claims that are not present or inferable from the original article.
+
+How to Evaluate:
+1. Read the source article carefully to identify all key facts and claims.
+2. Read the summary and check each statement against the source.
+3. Identify any facts in the summary that contradict or are not supported by the source article.
+4. Give the summary a consistency score between 1 and 5, where 1 means the summary contains major factual errors and 5 means it is fully consistent with the source.
+
+Source Article:
+{{Document}}
+
+Summary:
+{{Summary}}
+
+Evaluation Form (ENTER A SCORE BETWEEN 1-5):
+Consistency:

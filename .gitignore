@@ -1,0 +1,41 @@
+# Large model weights
+/models/
+
+# LLM judge output (hundreds of MB, regenerate with run_dsr1_summeval.sh)
+/results/
+
+# Intermediate logit CSVs (regenerate with extract_logits.py)
+/model_logits/
+
+# R2CCP / conformal predictor saved model checkpoints
+/model_paths/
+/R2CCP_paths/
+/reprompt_regrade/
+
+# Training and evaluation logs
+/lightning_logs/
+/logs/
+
+# Paper PDF (copyrighted, not for distribution)
+*.pdf
+
+# Python wheel (install from requirements.txt instead)
+*.whl
+
+# Benchmark output (generated artifact)
+benchmark_results.json
+
+# Claude Code internal state
+.claude/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store

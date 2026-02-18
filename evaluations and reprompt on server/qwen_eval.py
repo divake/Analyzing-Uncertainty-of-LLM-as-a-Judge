@@ -38,6 +38,14 @@ def main():
         # Or "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"
         help='Model used to evaluate as a judge'
     )
+    parser.add_argument(
+        '--temperature', type=float, default=1.0,
+        help='Sampling temperature. Use 1.0 for GPT-4o mini style, 0 for DeepSeek/Qwen local (greedy)'
+    )
+    parser.add_argument(
+        '--limit', type=int, default=None,
+        help='If set, only process the first N samples (useful for quick tests)'
+    )
 
     args = parser.parse_args()
 
@@ -62,6 +70,10 @@ def main():
     )
     model.eval()
 
+    if args.limit is not None:
+        data = data[:args.limit]
+
+    use_sampling = args.temperature > 0
     all_results = []
     for idx, item in enumerate(tqdm(data, desc="Scoring")):
         # Build the full prompt by filling in document and summary
@@ -71,7 +83,7 @@ def main():
                                   .replace("{{Summary}}", summary)
 
         # Tokenize and move to device
-        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+        inputs = tokenizer(prompt, return_tensors="pt").to("cuda:0")
         input_length = inputs.input_ids.shape[-1]
 
         # Run generation and collect scores
@@ -82,8 +94,8 @@ def main():
                 return_dict_in_generate=True,
                 output_scores=True,
                 top_k=args.top_k,
-                do_sample=True, # set to True to enable sampling (use temperature / top_p)
-                temperature = 1
+                do_sample=use_sampling,
+                temperature=args.temperature if use_sampling else None,
             )
 
         # Extract generated sequence and per-step logits

@@ -1,0 +1,23 @@
+You'll be handed a summary of a news article.
+
+Your challenge is to rate the fluency and language quality of the summary.
+
+Make sure to thoroughly read and understand these instructions before diving in. Keep this guide handy as you work through the task, so you can refer back to it if needed.
+
+Evaluation Criteria:
+Fluency (1-5): Is the summary written in clear, natural, grammatically correct language? A fluent summary should be easy to read, free from grammatical errors, awkward phrasing, or unnecessary repetition.
+
+How to Evaluate:
+1. Read the summary carefully, focusing on its language quality rather than its content.
+2. Identify any grammatical errors, awkward phrases, or unclear language.
+3. Assess how naturally and smoothly the text reads.
+4. Give the summary a fluency score between 1 and 5, where 1 means the summary has severe language issues and 5 means it is perfectly fluent.
+
+Source Article:
+{{Document}}
+
+Summary:
+{{Summary}}
+
+Evaluation Form (ENTER A SCORE BETWEEN 1-5):
+Fluency:

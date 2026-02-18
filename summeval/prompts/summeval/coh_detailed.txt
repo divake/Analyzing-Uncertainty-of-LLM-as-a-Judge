@@ -1,0 +1,23 @@
+You'll be handed a summary of a news article.
+
+Your challenge is to rate how coherent and well-structured the summary is.
+
+Make sure to thoroughly read and understand these instructions before diving in. Keep this guide handy as you work through the task, so you can refer back to it if needed.
+
+Evaluation Criteria:
+Coherence (1-5): Does the summary read as a unified, well-organized piece of writing? It should present its information in a logical, structured manner that flows naturally from one point to the next, rather than as a disjointed collection of facts.
+
+How to Evaluate:
+1. Read the summary as a standalone piece of text.
+2. Assess whether the ideas flow logically and the structure is clear.
+3. Check if the summary can be easily understood without reading the source article.
+4. Give the summary a coherence score between 1 and 5, where 1 means it is very incoherent and 5 means it reads as a highly coherent piece of writing.
+
+Source Article:
+{{Document}}
+
+Summary:
+{{Summary}}
+
+Evaluation Form (ENTER A SCORE BETWEEN 1-5):
+Coherence:
